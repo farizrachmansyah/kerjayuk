@@ -18,7 +18,7 @@
       class="swiper-container"
     >
       <SwiperSlide v-for="item in 6" :key="item" class="">
-        <nuxt-link to="/" class="block bg-white p-6 rounded-xl shadow-center-lg cursor-pointer" :title="`Item ${item}`">
+        <nuxt-link to="/" class="block bg-white p-4 rounded-xl shadow-center-lg cursor-pointer" :title="`Item ${item}`">
           <div class="mb-3">
             <div class="flex items-center justify-between gap-4">
               <div class="flex gap-4 items-center">

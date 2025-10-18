@@ -21,7 +21,8 @@ export default {
         gradient: `linear-gradient(to right, ${theme('colors.primary.DEFAULT')}, ${theme('colors.secondary.DEFAULT')})`
       }),
       boxShadow: {
-        'center-lg': '0 0 15px -3px rgba(0,0,0,0.1), 0 0 6px -2px rgba(0,0,0,0.05)'
+        'center-md': '0 0 6px -1px rgba(0,0,0,0.2), 0 0 4px -1px rgba(0,0,0,0.1)',
+        'center-lg': '0 0 15px -3px rgba(0,0,0,0.2), 0 0 6px -2px rgba(0,0,0,0.1)'
       },
       transitionDuration: {
         DEFAULT: '300ms'
