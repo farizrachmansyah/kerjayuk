@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky top-0 z-10 py-8">
+  <header class="sticky top-0 z-10 py-6 bg-white">
     <section class="container flex items-center justify-between">
       <NuxtLink class="flex w-fit" to="/">
         <NuxtImg src="/assets/img/logo.png" alt="KejaYuk!" height="24" />

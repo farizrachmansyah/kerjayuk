@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container mb-3">
+    <div class="container">
       <h1 class="font-semibold">PCS News</h1>
     </div>
 
@@ -53,6 +53,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 
 <style scoped>
 :deep(.swiper) {
+  @apply pt-3;
   padding-bottom: calc(16px + 12px);
 }
 

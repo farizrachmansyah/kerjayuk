@@ -12,6 +12,7 @@
 
   .site-main {
     @apply flex-grow;
+    padding-bottom: calc(59px + 32px);
   }
 }
 

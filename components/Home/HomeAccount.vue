@@ -9,21 +9,21 @@
       <div class="grid grid-cols-4 gap-4">
         <div class="flex flex-col items-center gap-2">
           <Icon name="heroicons:clock" class="text-primary text-4xl font-extrabold" />
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center text-center">
             <span class="font-semibold">08:30</span>
             <span class="text-xs">Check In</span>
           </div>
         </div>
         <div class="col-span-2 flex flex-col items-center gap-2">
           <Icon name="heroicons:clock" class="text-primary text-4xl font-extrabold" />
-          <div class="flex flex-col items-center">
-            <span class="font-semibold text-primary">03:00:00</span>
+          <div class="flex flex-col items-center text-center">
+            <span class="font-semibold text-primary">{{ timerFormat }}</span>
             <span class="text-xs">Working Hours</span>
           </div>
         </div>
         <div class="flex flex-col items-center gap-2">
           <Icon name="heroicons:clock" class="text-primary text-4xl font-extrabold" />
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center text-center">
             <span class="font-semibold">--:--</span>
             <span class="text-xs">Check Out</span>
           </div>
@@ -33,6 +33,30 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+const timer = ref(10800);
+let timerInterval = null;
+
+const timerFormat = computed(() => {
+  const hours = Math.floor(timer.value / 3600);
+  const mins = Math.floor((timer.value % 3600) / 60);
+  const secs = timer.value % 60;
+
+  const pad = (n) => String(n).padStart(2, '0');
+
+  return `${pad(hours)} : ${pad(mins)} : ${pad(secs)}`;
+});
+
+const startTimer = () => {
+  if (timerInterval) clearInterval(timerInterval);
+
+  timerInterval = setInterval(() => {
+    timer.value++;
+  }, 1000);
+};
+
+onMounted(() => startTimer());
+onUnmounted(() => clearInterval(timerInterval));
+</script>
 
 <style scoped></style>

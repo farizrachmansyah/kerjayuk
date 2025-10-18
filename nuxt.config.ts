@@ -4,7 +4,7 @@ import defaultMeta from './config/defaultMeta';
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'goodmoov',
+      title: 'KerjaYuk!',
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       meta: [...defaultMeta],
@@ -33,7 +33,7 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' }
   },
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   css: ['swiper/css', 'swiper/css/pagination'],
   modules: ['@nuxt/fonts', '@nuxt/image', '@nuxtjs/tailwindcss', '@vueuse/nuxt', 'nuxt-swiper', '@nuxt/icon'],
   fonts: {
