@@ -2,7 +2,7 @@
   <header class="sticky top-0 z-10 py-6 bg-white">
     <section class="container flex items-center justify-between">
       <NuxtLink class="flex w-fit" to="/">
-        <NuxtImg src="/assets/img/logo.png" alt="KejaYuk!" height="24" />
+        <NuxtImg src="/img/logo.png" alt="KejaYuk!" height="24" />
       </NuxtLink>
       <NuxtLink class="relative flex w-fit" to="/notification">
         <Icon name="heroicons:bell" class="text-2xl font-extrabold" />
