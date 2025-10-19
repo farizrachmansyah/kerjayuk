@@ -15,6 +15,15 @@ export default {
         },
         gray: {
           DEFAULT: '#9f9f9f'
+        },
+        success: {
+          DEFAULT: '#32ae84'
+        },
+        idle: {
+          DEFAULT: '#377eff'
+        },
+        error: {
+          DEFAULT: '#f72d18'
         }
       },
       backgroundImage: (theme) => ({
@@ -23,7 +32,8 @@ export default {
       boxShadow: {
         'top-md': '0 -4px 6px -3px rgba(0,0,0,0.2), 0 -2px 4px -3px rgba(0,0,0,0.1)',
         'center-md': '0 0 6px -1px rgba(0,0,0,0.2), 0 0 4px -1px rgba(0,0,0,0.1)',
-        'center-lg': '0 0 15px -3px rgba(0,0,0,0.2), 0 0 6px -2px rgba(0,0,0,0.1)'
+        'center-lg': '0 0 15px -3px rgba(0,0,0,0.2), 0 0 6px -2px rgba(0,0,0,0.1)',
+        'bottom-md': '0 4px 6px -3px rgba(0,0,0,0.2), 0 2px 4px -3px rgba(0,0,0,0.1)'
       },
       transitionDuration: {
         DEFAULT: '300ms'

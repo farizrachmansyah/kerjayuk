@@ -3,8 +3,6 @@
     <HomeAccount class="mb-6" />
     <HomeNews class="mb-6" />
     <HomeOnline class="mb-6" />
-
-    <Menu />
   </main>
 </template>
 
