@@ -34,7 +34,7 @@
 </template>
 
 <script setup>
-const timer = ref(10800);
+const timer = ref(0);
 let timerInterval = null;
 
 const timerFormat = computed(() => {
@@ -55,7 +55,15 @@ const startTimer = () => {
   }, 1000);
 };
 
-onMounted(() => startTimer());
+watch(timer, (val) => {
+  localStorage.setItem('workingHours', val);
+});
+
+onMounted(() => {
+  const currWorkingHours = localStorage.getItem('workingHours');
+  if (currWorkingHours) timer.value = Number(currWorkingHours);
+  startTimer();
+});
 onUnmounted(() => clearInterval(timerInterval));
 </script>
 
